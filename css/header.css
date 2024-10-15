@@ -1,0 +1,220 @@
+header {
+  background-image: url(../img/global/header-bg.png);
+  background-size: cover;
+  min-height: 800px;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding-top: 20px;
+}
+.header__nav a {
+  color: var(--burger-menu-items-color);
+  font-size: 15px;
+  font-family: var(--main-font-family);
+  padding: 10px 15px;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.header__nav a:hover {
+  transform: scale(1.2);
+}
+
+.header__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  flex: 1;
+  font-family: var(--main-font-family);
+}
+.header__text h1 {
+  color: var(--main-white-color);
+  font-size: clamp(20px, 5vw, 35px);
+  margin-bottom: 20px;
+}
+
+.header__text p {
+  color: var(--main-white-color);
+  font-size: clamp(12px, 3vw, 20px);
+  margin-bottom: 20px;
+}
+
+.header__text button {
+  background-color: var(--main-blue-color);
+  color: var(--main-white-color);
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: clamp(10px, 2vw, 15px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header__text button:hover {
+  background-color: var(--hover-blue-color);
+}
+.header__logo img {
+  width: clamp(100px, 30vw, 180px);
+}
+.header__social-media img {
+  transition: transform 0.3s ease;
+}
+
+.header__social-media img:hover {
+  transform: scale(1.2);
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .header__nav-list,
+  .header__social-media {
+    display: none;
+  }
+  .header__nav.open .header__nav-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: var(--nav-menu-bg-color);
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  .header__nav.open .header__social-media {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    gap: 5px;
+    top: 100px;
+    left: 30px;
+    z-index: 1001;
+  }
+
+  .header__nav.open .header__social-media img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    width: 30px;
+    height: 26px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .menu__btn:hover span {
+    background-color: var(--main-white-color);
+  }
+  .menu__btn span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    background-color: var(--burger-menu-items-color);
+    transition: background-color 0.2s ease-in-out;
+    right: 0;
+    z-index: 1001;
+  }
+  .header__nav li {
+    display: block;
+    padding: 12px;
+  }
+
+  .menu__btn span:nth-child(1) {
+    width: 100%;
+    transform: translateY(-8px);
+  }
+
+  .menu__btn span:nth-child(3) {
+    width: 40%;
+    transform: translateY(8px);
+  }
+
+  .header__nav.open .menu__btn span {
+    background-color: var(--burger-menu-items-color);
+  }
+
+  .header__nav.open .menu__btn:hover span {
+    background-color: var(--main-white-color);
+  }
+
+  .header__nav.open .menu__btn span:nth-child(1) {
+    width: 100%;
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .header__nav.open .menu__btn span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__nav.open .menu__btn span:nth-child(3) {
+    width: 100%;
+    transform: translateY(0) rotate(-45deg);
+  }
+  html.no-scroll,
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+@media (min-width: 901px) {
+  .menu__btn {
+    display: none;
+  }
+
+  .header__social-media {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+  }
+
+  .header__social-media img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header__nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .header__nav-list {
+    display: flex;
+    gap: 10px;
+  }
+}
