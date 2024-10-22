@@ -13,7 +13,7 @@ header {
   color: var(--burger-menu-items-color);
   font-size: 15px;
   font-family: var(--main-font-family);
-  padding: 10px 15px;
+  padding: 15px;
   transition: transform 0.3s ease, font-size 0.3s ease;
   display: inline-block;
   transform-origin: center;
@@ -30,9 +30,13 @@ header {
   flex-direction: column;
   text-align: center;
   width: 100%;
-  flex: 1;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 20px auto;
+  height: 100vh;
   font-family: var(--main-font-family);
 }
+
 .header__text h1 {
   color: var(--main-white-color);
   font-size: clamp(20px, 5vw, 35px);
@@ -147,7 +151,6 @@ header {
   }
   .header__nav li {
     display: block;
-    padding: 12px;
   }
 
   .menu__btn span:nth-child(1) {

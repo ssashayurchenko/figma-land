@@ -2,11 +2,13 @@
 
 :root {
   --main-font-family: "Open Sans", sans-serif;
-  --nav-menu-bg-color: #222B32;
-  --burger-menu-items-color: #E0E0E0;
-  --main-white-color: #FFFFFF;
+  --nav-menu-bg-color: #222b32;
+  --burger-menu-items-color: #e0e0e0;
+  --main-white-color: #ffffff;
   --main-blue-color: #007bff;
   --hover-blue-color: #0056b3;
+  --main-title-color: #252b42;
+  --second-text-color: #374754;
 }
 
 * {
