@@ -39,3 +39,24 @@ ul {
 a {
   text-decoration: none;
 }
+
+button {
+  background-color: var(--main-blue-color);
+  color: var(--main-white-color);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: clamp(15px, 2vw, 20px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-blue-color);
+}
+
+h2 {
+  font-size: clamp(20px, 3vw, 27px);
+  font-family: var(--main-font-family);
+  color: var(--main-title-color);
+}

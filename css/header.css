@@ -49,20 +49,6 @@ header {
   margin-bottom: 20px;
 }
 
-.header__text button {
-  background-color: var(--main-blue-color);
-  color: var(--main-white-color);
-  border: none;
-  border-radius: 15px;
-  padding: 10px 20px;
-  font-size: clamp(10px, 2vw, 15px);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.header__text button:hover {
-  background-color: var(--hover-blue-color);
-}
 .header__logo img {
   width: clamp(100px, 30vw, 180px);
 }
