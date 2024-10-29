@@ -9,6 +9,7 @@
   --hover-blue-color: #0056b3;
   --main-title-color: #252b42;
   --second-text-color: #374754;
+  --input-bg-color: #f4f4f4;
 }
 
 * {
@@ -46,7 +47,7 @@ button {
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
-  font-size: clamp(15px, 2vw, 20px);
+  font-size: clamp(10px, 2vw, 15px);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -59,4 +60,5 @@ h2 {
   font-size: clamp(20px, 3vw, 27px);
   font-family: var(--main-font-family);
   color: var(--main-title-color);
+  margin-bottom: 10px;
 }
