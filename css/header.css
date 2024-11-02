@@ -1,7 +1,8 @@
 header {
   background-image: url(../img/global/header-bg.png);
   background-size: cover;
-  min-height: 800px;
+  max-height: 600px;
+  height: auto;
   background-position: center;
   display: flex;
   align-items: center;

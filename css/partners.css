@@ -1,0 +1,22 @@
+.brands-image-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 40px;
+}
+.brands-image-section img {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.brands-image-section img:hover {
+  transform: scale(1.1);
+}
+
+.title_section img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
