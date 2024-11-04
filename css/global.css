@@ -10,6 +10,7 @@
   --main-title-color: #252b42;
   --second-text-color: #374754;
   --input-bg-color: #f4f4f4;
+  --pricing-section-bg: #252b42;
 }
 
 * {
@@ -52,15 +53,8 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.main-button:hover {
   background-color: var(--hover-blue-color);
-}
-
-h2 {
-  font-size: clamp(20px, 3vw, 27px);
-  font-family: var(--main-font-family);
-  color: var(--main-title-color);
-  margin-bottom: 30px;
 }
 
 .title_section {
@@ -76,4 +70,11 @@ h2 {
   font-size: clamp(12px, 3vw, 20px);
   font-family: var(--main-font-family);
   color: var(--second-text-color);
+}
+
+.title_section h2 {
+  font-size: clamp(20px, 3vw, 27px);
+  font-family: var(--main-font-family);
+  color: var(--main-title-color);
+  margin-bottom: 30px;
 }

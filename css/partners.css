@@ -1,11 +1,13 @@
 .brands-image-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
   margin: 40px;
 }
 .brands-image-section img {
-  width: 100%;
+  width: 150px;
   height: auto;
   box-sizing: border-box;
   transition: transform 0.3s ease;

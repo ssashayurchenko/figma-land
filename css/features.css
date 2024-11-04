@@ -1,5 +1,6 @@
 .features_section ul {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 15px;
@@ -11,6 +12,7 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
+  max-width: 400px;
 }
 
 .features_section img {
@@ -62,6 +64,13 @@
   padding: 20px;
   gap: 20px;
   margin: 40px;
+}
+
+h2 {
+  font-size: clamp(20px, 3vw, 27px);
+  font-family: var(--main-font-family);
+  color: var(--main-title-color);
+  margin-bottom: 30px;
 }
 
 .left-section-image img,

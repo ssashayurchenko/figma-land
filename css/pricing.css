@@ -1,0 +1,102 @@
+#pricing {
+  background-color: var(--pricing-section-bg);
+  padding: 40px;
+}
+
+.pricing-title_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.pricing-title_section h2 {
+  font-size: clamp(20px, 3vw, 27px);
+  font-family: var(--main-font-family);
+  color: var(--main-white-color);
+  margin-bottom: 30px;
+}
+
+.pricing-title_section p {
+  font-size: clamp(12px, 3vw, 20px);
+  font-family: var(--main-font-family);
+  color: var(--main-white-color);
+  margin-bottom: 40px;
+}
+
+.pricing-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-white-color);
+  border-radius: 15px;
+  font-family: var(--main-font-family);
+  padding: 20px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.option h5 {
+  font-size: clamp(15px, 3vw, 20px);
+}
+
+.option p {
+  font-size: clamp(10px, 3vw, 15px);
+}
+
+.option:hover {
+  background-color: var(--main-blue-color);
+  color: var(--main-white-color);
+  transform: scale(1.1);
+}
+
+.option:hover .pricing-button {
+  background-color: var(--main-white-color);
+  color: var(--main-blue-color);
+}
+
+.pricing-button {
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+.pricing-button:hover {
+  transform: scale(1.1);
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.number {
+  font-size: clamp(30px, 3vw, 50px);
+  font-weight: bold;
+}
+
+.meaning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.currency {
+  font-weight: bold;
+}
+
+.pricing-features li {
+  margin-bottom: 10px;
+}
