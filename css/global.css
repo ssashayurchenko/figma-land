@@ -10,7 +10,7 @@
   --main-title-color: #252b42;
   --second-text-color: #374754;
   --input-bg-color: #f4f4f4;
-  --pricing-section-bg: #252b42;
+  --dark-bg: #252b42;
   --contact-us-bg-form: #f9f9f9;
   --contact-us-border-form: #ddd;
   --contact-us-input-border: #ccc;
@@ -26,11 +26,6 @@ html {
   height: 100%;
   margin: 0;
   overflow: auto;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
 }
 
 img {
