@@ -68,7 +68,7 @@
           Most calendars are designed for teams. Slate is designed for
           freelancers.
         </p>
-        <button class="main-button">Try For Free</button>
+        <a class="main-button" href="#pricing">Try For Free</a>
       </div>
       <div class="right-section-image">
         <img src="./img/features/macbook-pro.png" alt="Macbook Pro" />
@@ -97,8 +97,19 @@
         </div>
         <h4>Subscribe to our Newsletter</h4>
         <p>Available exclusivery on Figmaland</p>
-        <input type="email" placeholder="Your Email" />
-        <button class="main-button" type="submit">Subscribe</button>
+        <form id="registerForm" action="/register" method="POST">
+          <input
+            name="email"
+            id="sub-input"
+            type="text"
+            placeholder="Your Email"
+            required
+          />
+          <div id="emailCheck"></div>
+          <button id="sub-btn" class="main-button" type="submit">
+            Subscribe
+          </button>
+        </form>
       </div>
     </div>
   </body>

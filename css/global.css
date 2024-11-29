@@ -14,6 +14,12 @@
   --contact-us-bg-form: #f9f9f9;
   --contact-us-border-form: #ddd;
   --contact-us-input-border: #ccc;
+  --email-check-font-color: #F15B07;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
 
 * {
@@ -40,7 +46,7 @@ a {
   text-decoration: none;
 }
 
-button {
+.main-button, .pricing-button {
   background-color: var(--main-blue-color);
   color: var(--main-white-color);
   border: none;
