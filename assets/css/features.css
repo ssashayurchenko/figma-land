@@ -120,8 +120,18 @@ h2 {
   margin: 10px;
 }
 
-#sub-input.input-error {
-  border: 2px solid var(--email-check-font-color);
+/* Стиль для валідного email */
+#emailCheck.valid {
+  color: var(--email-check-valid-color);
+  font-family: var(--main-font-family);
+  font-size: clamp(10px, 2vw, 12px);
+}
+
+/* Стиль для невалідного email */
+#emailCheck.invalid {
+  color: var(--email-check-invalid-color);
+  font-family: var(--main-font-family);
+  font-size: clamp(10px, 2vw, 12px);
 }
 
 @media (min-width: 901px) {
