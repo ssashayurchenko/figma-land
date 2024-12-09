@@ -1,6 +1,8 @@
 function init(): void {
   import(("./subscription.js"));
   import(("./global.header.js"));
+  import(("./contact-us-name.js"));
+  import(("./contact-us-submit.js"))
 }
 
 const totalPartials: number = document.querySelectorAll(

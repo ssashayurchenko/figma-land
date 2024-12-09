@@ -16,16 +16,27 @@
       </div>
       <div class="contacts-block">
         <section class="left-section">
-          <form id="contactUsForm" method="POST">
+          <form id="contactUsForm">
             <h5>Contact Us</h5>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
+            <input id="userName" type="text" placeholder="Your Name" required />
+            <div id="userNameCheck"></div>
+            <input
+              id="userPhone"
+              type="number"
+              placeholder="Your Phone number"
+              required
+            />
+            <div id="userPhoneCheck"></div>
             <textarea
+              id="userMessage"
               name="Message"
               placeholder="Your Message"
               required
             ></textarea>
-            <a class="main-button" type="Send">Send</a>
+            <div id="userMessageCheck"></div>
+            <button id="contact-btn" class="main-button" type="submit">
+              Send
+            </button>
           </form>
         </section>
         <section class="right-section">

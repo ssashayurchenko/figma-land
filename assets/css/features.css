@@ -120,18 +120,29 @@ h2 {
   margin: 10px;
 }
 
-/* Стиль для валідного email */
-#emailCheck.valid {
+#emailCheck.email-valid {
   color: var(--email-check-valid-color);
   font-family: var(--main-font-family);
   font-size: clamp(10px, 2vw, 12px);
+  transition: color 0.3s ease;
 }
 
-/* Стиль для невалідного email */
-#emailCheck.invalid {
+#emailCheck.email-invalid {
   color: var(--email-check-invalid-color);
   font-family: var(--main-font-family);
   font-size: clamp(10px, 2vw, 12px);
+  transition: color 0.3s ease;
+}
+
+#emailInput.email-valid {
+  border-radius: 20px;
+  background-color: var(--email-input-valid-color);
+  transition: background-color 0.3s ease;
+}
+
+#emailInput.email-invalid {
+  background-color: var(--email-input-invalid-color);
+  transition: background-color 0.3s ease;
 }
 
 @media (min-width: 901px) {

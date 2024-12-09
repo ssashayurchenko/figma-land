@@ -2,6 +2,8 @@
 function init() {
     import(("./subscription.js"));
     import(("./global.header.js"));
+    import(("./contact-us-name.js"));
+    import(("./contact-us-submit.js"));
 }
 const totalPartials = document.querySelectorAll('[data-hx-trigger="load"], [hx-trigger="load"]').length;
 let loadedPartialsCount = 0;

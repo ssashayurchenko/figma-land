@@ -1,42 +1,66 @@
-const form = document.getElementById("registerForm") as HTMLElement;
-const emailInput = document.getElementById("sub-input") as HTMLInputElement;
+const registerForm = document.getElementById("registerForm") as HTMLElement;
+const emailInput = document.getElementById("emailInput") as HTMLInputElement;
 const emailCheck = document.getElementById("emailCheck") as HTMLElement;
-const submitButton = document.getElementById("sub-btn") as HTMLElement;
+const submitButton = document.getElementById("register-btn") as HTMLElement;
 
 function validateEmail(email: string): boolean {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailPattern.test(email);
 }
 
-emailInput.addEventListener("input", () => {
-  if (validateEmail(emailInput.value)) {
-    emailCheck.innerHTML = "Email is valid";
-    emailCheck.classList.remove("invalid");
-    emailCheck.classList.add("valid");
+function updateEmailStatus(isValid: boolean, message: string): void {
+  if (isValid) {
+    emailCheck.innerHTML = message;
+    emailCheck.classList.remove("email-invalid");
+    emailCheck.classList.add("email-valid");
+
+    emailInput.classList.remove("email-invalid");
+    emailInput.classList.add("email-valid");
   } else {
-    emailCheck.innerHTML = `
-    Your email is invalid.<br>
-    It should be in the format: example@domain.example
-    `;
-    emailCheck.classList.remove("valid");
-    emailCheck.classList.add("invalid");
+    emailCheck.innerHTML = message;
+    emailCheck.classList.remove("email-valid");
+    emailCheck.classList.add("email-invalid");
+
+    emailInput.classList.remove("email-valid");
+    emailInput.classList.add("email-invalid");
+  }
+}
+
+emailInput.addEventListener("input", () => {
+  if (emailInput.value === "") {
+    updateEmailStatus(false, `Please enter something.`);
+    return;
+  }
+  if (validateEmail(emailInput.value)) {
+    updateEmailStatus(true, "Email is valid");
+  } else {
+    updateEmailStatus(
+      false,
+      `
+      Your email is invalid.<br>
+      It should be in the format: example@domain.example
+    `
+    );
   }
 });
 
-form.addEventListener("submit", (event) => {
+registerForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
   const emailValue = emailInput.value.trim();
+
+  if (emailValue === "") {
+    updateEmailStatus(false, "Please enter an email before submitting.");
+    return;
+  }
+
   if (!validateEmail(emailValue)) {
-    emailCheck.innerHTML = `Please enter a valid email before submitting.`;
-    emailCheck.classList.remove("valid");
-    emailCheck.classList.add("invalid");
+    updateEmailStatus(false, `Please enter a valid email before submitting.`);
     return;
   }
 
   alert("Subscription successful!");
   emailInput.value = "";
   emailCheck.innerHTML = "";
-  emailCheck.classList.remove("invalid");
-  emailCheck.classList.add("valid");
+  emailCheck.classList.remove("email-valid");
+  emailInput.classList.remove("email-valid");
 });

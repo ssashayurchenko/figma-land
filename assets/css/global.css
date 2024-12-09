@@ -16,6 +16,8 @@
   --contact-us-input-border: #ccc;
   --email-check-invalid-color: #f15b07;
   --email-check-valid-color: #287446;
+  --email-input-invalid-color: #ffe6e6;
+  --email-input-valid-color: #e6ffe6;
 }
 
 .container {
