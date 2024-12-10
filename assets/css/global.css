@@ -14,10 +14,10 @@
   --contact-us-bg-form: #f9f9f9;
   --contact-us-border-form: #ddd;
   --contact-us-input-border: #ccc;
-  --email-check-invalid-color: #f15b07;
-  --email-check-valid-color: #287446;
-  --email-input-invalid-color: #ffe6e6;
-  --email-input-valid-color: #e6ffe6;
+  --input-check-invalid-color: #f15b07;
+  --input-check-valid-color: #287446;
+  --input-invalid-color: #ffe6e6;
+  --input-valid-color: #e6ffe6;
 }
 
 .container {
@@ -35,6 +35,7 @@ html {
   height: 100%;
   margin: 0;
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -55,8 +56,8 @@ a {
   color: var(--main-white-color);
   border: none;
   border-radius: 25px;
-  padding: 10px clamp(10px, 2vw, 20px);
-  font-size: clamp(10px, 2vw, 15px);
+  padding: 10px clamp(20px, 2vw, 30px);
+  font-size: clamp(14px, 2vw, 18px);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

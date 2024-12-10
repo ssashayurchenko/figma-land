@@ -1,3 +1,4 @@
+import { updateValidationStatus } from "./input-status.js";
 export const userName = document.getElementById("userName") as HTMLInputElement;
 export const userNameCheck = document.getElementById(
   "userNameCheck"
@@ -6,7 +7,7 @@ export const userNameCheck = document.getElementById(
 export function validateName(
   name: string
 ): "valid" | "invalid" | "invalidCharacters" | "tooLongName" {
-  const namePattern = /^[a-zA-Z\s]{1,25}$/;
+  const namePattern = /^[a-zA-Z\s]{2,25}$/;
 
   if (name.length > 25) {
     return "tooLongName";
@@ -22,19 +23,23 @@ userName.addEventListener("input", () => {
   const validationResult = validateName(nameValue);
 
   userNameCheck.innerHTML = "";
+  userNameCheck.classList.remove("valid", "invalid");
   userName.classList.remove("valid", "invalid");
 
   if (nameValue === "") {
-    userName.classList.add("invalid");
-    userNameCheck.innerHTML = "Please fill in this field";
+    updateValidationStatus(
+      false,
+      "Please fill in this field",
+      userName,
+      userNameCheck
+    );
     return;
   }
 
   if (validationResult === "valid") {
-    userName.classList.add("valid");
-    userNameCheck.innerHTML = "Your name is valid";
+    updateValidationStatus(true, "", userName, userNameCheck);
   } else {
-    userName.classList.add("invalid");
+    updateValidationStatus(false, "", userName, userNameCheck);
     if (validationResult === "invalidCharacters") {
       userNameCheck.innerHTML = "Your name should contain only letters.";
     } else if (validationResult === "tooLongName") {

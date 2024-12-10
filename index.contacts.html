@@ -1,98 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
-  </head>
-  <body>
-    <section id="contacts">
-      <div class="title_section">
-        <h2>Contact Us</h2>
-        <p>
-          Most calendars are designed for teams. Slate is designed for
-          freelancers.
-        </p>
-      </div>
-      <div class="contacts-block">
-        <section class="left-section">
-          <form id="contactUsForm">
-            <h5>Contact Us</h5>
-            <input id="userName" type="text" placeholder="Your Name" required />
-            <div id="userNameCheck"></div>
-            <input
-              id="userPhone"
-              type="number"
-              placeholder="Your Phone number"
-              required
-            />
-            <div id="userPhoneCheck"></div>
-            <textarea
-              id="userMessage"
-              name="Message"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <div id="userMessageCheck"></div>
-            <button id="contact-btn" class="main-button" type="submit">
-              Send
-            </button>
-          </form>
-        </section>
-        <section class="right-section">
-          <ul class="contacts-data">
-            <li class="contacts-icon">
-              <img src="./assets/img/contacts/map-icon.png" alt="Map icon" />
-              <p>
-                6386 Spring St undefined Anchorage, Georgia 12473 United States
-              </p>
-            </li>
-            <li class="contacts-icon">
-              <img
-                src="./assets/img/contacts/phone-icon.png"
-                alt="Phone icon"
-              />
-              <a href="tel:(843) 555-0130" class="phone-link">(843) 555-0130</a>
-            </li>
-            <li class="contacts-icon">
-              <img
-                src="./assets/img/contacts/email-icon.png"
-                alt="Email icon"
-              />
-              <a href="mailto: willie.jennings@example.com"
-                >willie.jennings@example.com</a
-              >
-            </li>
-          </ul>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438881.3820673786!2d-83.19406244999999!3d32.67852994999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f136c51d5f8157%3A0x6684bc10ec4f10e7!2z0JTQttC-0YDQtNC20LjRjywg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1730895438289!5m2!1sru!2sua"
-            allowfullscreen=""
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <div class="social-media-icons">
-            <a href="https://uk-ua.facebook.com/">
-              <img
-                src="./assets/img/contacts/facebook-icon.png"
-                alt="Facebook icon"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2F"
-            >
-              <img
-                src="./assets/img/contacts/linkedin-icon.png"
-                alt="Linkedin icon"
-              />
-            </a>
-            <a href="https://x.com/i/flow/login">
-              <img
-                src="./assets/img/contacts/twitter-icon.png"
-                alt="Twitter icon"
-              />
-            </a>
-          </div>
-        </section>
+<section id="contacts">
+  <div class="title_section">
+    <h2>Contact Us</h2>
+    <p>
+      Most calendars are designed for teams. Slate is designed for freelancers.
+    </p>
+  </div>
+  <div class="contacts-block">
+    <section class="left-section">
+      <form id="contactUsForm">
+        <h5>Contact Us</h5>
+        <input id="userName" type="text" placeholder="Your Name" required />
+        <div id="userNameCheck"></div>
+        <div id="phone-input">
+          <select id="country-select">
+            <option value="+1">USA (+1)</option>
+            <option value="+380">Ukraine (+380)</option>
+            <option value="+44">UK (+44)</option>
+            <option value="+91">India (+91)</option>
+            <option value="+49">Germany (+49)</option>
+            <option value="+33">France (+33)</option>
+            <option value="+39">Italy (+39)</option>
+            <option value="+34">Spain (+34)</option>
+            <option value="+81">Japan (+81)</option>
+            <option value="+61">Australia (+61)</option>
+            <option value="+55">Brazil (+55)</option>
+            <option value="+52">Mexico (+52)</option>
+            <option value="+86">China (+86)</option>
+            <option value="+31">Netherlands (+31)</option>
+            <option value="+1">Canada (+1)</option>
+            <option value="+27">South Africa (+27)</option>
+            <option value="+20">Egypt (+20)</option>
+            <option value="+48">Poland (+48)</option>
+          </select>
+          <input
+            id="userPhone"
+            type="tel"
+            placeholder="Your Phone number"
+            required
+          />
+          <div id="userPhoneCheck"></div>
+        </div>
+        <textarea
+          id="userMessage"
+          name="Message"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <div id="userMessageCheck"></div>
+        <button id="contact-btn" class="main-button" type="submit">Send</button>
+      </form>
+    </section>
+    <section class="right-section">
+      <ul class="contacts-data">
+        <li class="contacts-icon">
+          <img src="./assets/img/contacts/map-icon.png" alt="Map icon" />
+          <p>6386 Spring St undefined Anchorage, Georgia 12473 United States</p>
+        </li>
+        <li class="contacts-icon">
+          <img src="./assets/img/contacts/phone-icon.png" alt="Phone icon" />
+          <a href="tel:(843) 555-0130" class="phone-link">(843) 555-0130</a>
+        </li>
+        <li class="contacts-icon">
+          <img src="./assets/img/contacts/email-icon.png" alt="Email icon" />
+          <a href="mailto: willie.jennings@example.com"
+            >willie.jennings@example.com</a
+          >
+        </li>
+      </ul>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3438881.3820673786!2d-83.19406244999999!3d32.67852994999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f136c51d5f8157%3A0x6684bc10ec4f10e7!2z0JTQttC-0YDQtNC20LjRjywg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1730895438289!5m2!1sru!2sua"
+        allowfullscreen=""
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div class="social-media-icons">
+        <a href="https://uk-ua.facebook.com/">
+          <img
+            src="./assets/img/contacts/facebook-icon.png"
+            alt="Facebook icon"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/uas/login?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2F"
+        >
+          <img
+            src="./assets/img/contacts/linkedin-icon.png"
+            alt="Linkedin icon"
+          />
+        </a>
+        <a href="https://x.com/i/flow/login">
+          <img
+            src="./assets/img/contacts/twitter-icon.png"
+            alt="Twitter icon"
+          />
+        </a>
       </div>
     </section>
-  </body>
-</html>
+  </div>
+</section>

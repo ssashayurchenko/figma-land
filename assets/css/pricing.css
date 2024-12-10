@@ -28,6 +28,7 @@
 .pricing-options {
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
   justify-content: center;
   align-items: center;
   gap: 30px;

@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -38,6 +39,22 @@
   margin-bottom: 20px;
   color: var(--main-title-color);
   font-family: var(--main-font-family);
+}
+
+#country-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  border: 1px solid var(--contact-us-input-border);
+  cursor: pointer;
+  appearance: none;
+  width: 120px;
+}
+
+#country-select:focus {
+  outline: none;
+  border-color: #007bff;
 }
 
 .right-section {
@@ -83,6 +100,30 @@ iframe {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+#userName.valid,
+#userPhone.valid,
+#userMessage.valid {
+  background-color: var(--input-valid-color);
+  transition: background-color 0.3s ease;
+}
+
+#userName.invalid,
+#userPhone.invalid,
+#userMessage.invalid {
+  background-color: var(--input-invalid-color);
+  transition: background-color 0.3s ease;
+}
+
+#userNameCheck.invalid,
+#userPhoneCheck.invalid,
+#userMessageCheck.invalid {
+  padding-top: 10px;
+  color: var(--input-check-invalid-color);
+  font-family: var(--main-font-family);
+  font-size: clamp(10px, 2vw, 14px);
+  transition: color 0.3s ease;
 }
 
 @media (max-width: 900px) {
