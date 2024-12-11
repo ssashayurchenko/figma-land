@@ -122,8 +122,9 @@ iframe {
   padding-top: 10px;
   color: var(--input-check-invalid-color);
   font-family: var(--main-font-family);
-  font-size: clamp(10px, 2vw, 14px);
+  font-size: clamp(13px, 2vw, 15px);
   transition: color 0.3s ease;
+  text-align: center;
 }
 
 @media (max-width: 900px) {

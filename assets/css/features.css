@@ -93,7 +93,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-
 .left-section-text p {
   font-size: clamp(10px, 3vw, 18px);
   font-family: var(--main-font-family);
@@ -113,19 +112,12 @@ h2 {
   cursor: pointer;
 }
 
-#emailCheck {
-  display: block;
-  font-family: var(--main-font-family);
-  color: var(--email-check-font-color);
-  font-size: clamp(10px, 2vw, 12px);
-  margin: 10px;
-}
-
 #emailCheck.invalid {
   padding-top: 10px;
+  padding-bottom: 10px;
   color: var(--input-check-invalid-color);
   font-family: var(--main-font-family);
-  font-size: clamp(10px, 2vw, 14px);
+  font-size: clamp(13px, 2vw, 15px);
   transition: color 0.3s ease;
 }
 
