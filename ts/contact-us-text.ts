@@ -6,12 +6,33 @@ export const userMessageCheck = document.getElementById(
   "userMessageCheck"
 ) as HTMLElement;
 
+const validTextPattern = /^[\w!?%#$@+\-= .,&*()]+$/;
+
 userMessage.addEventListener("input", () => {
   const textValue = userMessage.value.trim();
+  if (textValue == "") {
+    updateValidationStatus(
+      false,
+      "Text cannot be empty",
+      userMessage,
+      userMessageCheck
+    );
+    return;
+  }
   validateText(textValue);
 });
 
 export function validateText(text: string): boolean {
+  if (!validTextPattern.test(text)) {
+    updateValidationStatus(
+      false,
+      "Invalid text format",
+      userMessage,
+      userMessageCheck
+    );
+    return false;
+  }
+
   if (text.length > 120) {
     updateValidationStatus(
       false,
